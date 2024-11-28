@@ -1,0 +1,34 @@
+{
+  "name": "formaz",
+  "version": "1.0.1",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch --dts",
+    "build": "tsup --dts --minify",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "release": "pnpm run build && changeset publish"
+  },
+  "keywords": [
+    "formaz",
+    "form"
+  ],
+  "author": "Abdul Aziz <azizvector16@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.10",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.0.2"
+}
